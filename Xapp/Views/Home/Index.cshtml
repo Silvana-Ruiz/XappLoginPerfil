@@ -1,59 +1,75 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="/XAPP_css/login_style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <main>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-<link href="/XAPP_css/login_style.css" rel="stylesheet" type="text/css"> 
+        <section class="loginandimg">
+            <div class="login">
+                <div class="loginabsolute">
+                    <h2 class="login-title">Log In</h2>
+                    <h3 class="login-welcome">¡Welcome Xapien! </h3>
 
-<div class="parent clearfix" style="font-family: Poppins">
-    <div class="bg-illustration"></div>
+                    <div class="formulario">
 
 
-    <div class="login">
-      <div class="formulario">
-        <h1>Log In</h1>
-		    <h5>¡Welcome Xapien! </h5>
+                        <div class="login-form">
+                            <form action="">
+                                <label for="">Correo electrónico</label>
+                                <input type="email" placeholder="">
+                                <label for="">Contraseña</label>
+                                <input type="password" placeholder="">
 
-        <div class="login-form">
-          <form action="">
-            <label for="">Correo electrónico</label>
-            <input type="email" placeholder="">
-            <label for="">Contraseña</label>
-            <input type="password" placeholder="">
+                                <div class="remember-form">
+                                    <input type="checkbox">
+                                    <span>Mantenerme conectado</span>
+                                </div>
+                                <button type="submit">Log In</button>
+                                <div class="forget-pass">
+                                    <button class="btn btn-primary contra-button" type="button">¿Olvidaste tu contraseña?</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
 
-            <div class="remember-form">
-              <input type="checkbox">
-              <span>Mantenerme conectado</span>
+                </div>
             </div>
-            <button type="submit">Log In</button>
-            <div class="forget-pass">
-              <button class="btn btn-primary contra-button" type="button">¿Olvidaste tu contraseña?</button>
+
+            <div class="imgxipe">
+                <!--<img src="https://drive.google.com/uc?export=view&id=1OpGwdjlr2iC1KNanzcmz6178flh9qQZ2" alt="XIPE Employees" />
+
+                -->
             </div>
-          </form>
+        </section>
+
+        <!-- PopUp -->
+        <div class="modal-cont">
+            <div class="modal-box">
+                <span class="close">&times;</span>
+                <form action="" class="login-box">
+                    <h2 id="titulo_contra"> Cambiar Contraseña </h2>
+                    <label for="">Correo:</label>
+                    <input type="text" class="nameskill" id="field1" required>
+                    <label for="">Contraseña nueva:</label>
+                    <input type="text" class="contra_nueva" value="" required>
+                    <label for="">Confirmar contraseña nueva:</label>
+                    <input type="text" class="contra_nueva" value="" required><br>
+                    <button class="save-button">Save</button>
+                </form>
+            </div>
         </div>
-      </div>
 
-      <!-- PopUp -->
-      <div class="modal-cont">
-        <div class="modal-box">
-            <span class="close">&times;</span>
-            <form action="" class="login-box">
-                <h2 id="titulo_contra"> Cambiar Contraseña </h2>
-                <label for="">Correo:</label>
-                <input type="text" class="nameskill" id="field1" required>
-                <label for="">Contraseña nueva:</label>
-                <input type="text" class="contra_nueva" value="" required>
-                <label for="">Confirmar contraseña nueva:</label>
-                <input type="text" class="contra_nueva" value="" required><br>
-                <button class="save-button">Save</button>
-            </form>
-        </div>
-      </div>
-
-    </div>
-
-</div>
-
+    </main>
+</body>
 <!-- Archivo de Javascript -->
 <script src="/XAPP_js/login_code.js"></script>
+</html>
