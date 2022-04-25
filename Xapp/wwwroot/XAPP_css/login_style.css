@@ -121,6 +121,8 @@ img {
 /*Login form*/
 .login-form label {
     font-size: 1.8rem;
+
+    color:green;
 }
 
 input[type=email], input[type=password] {
