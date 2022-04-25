@@ -2,13 +2,15 @@
     <main role="main" class="pb-3">
 
 
-        <!DOCTYPE html>
+<!DOCTYPE html>
         <html>
         <!-- Importar CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <!-- Libreria de Iconos -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="~/XAPP_css/Profile.css" rel="stylesheet" type="text/css">
 
         <!-- Sidebar -->
@@ -23,7 +25,7 @@
         <!-- Grid Profile-->
         <section class="profilesection">
             <h2 class="myprofiletext bgColor">My Profile</h2>
-
+            <button class="profile-button" type="button">Guardar Cambios</button>
 
             <div class="profileWrapper">
 
@@ -49,18 +51,18 @@
                 <div class="profileInfo-skills">
                     <div class="p-1 py-5">
                         <h2 class="d-flex justify-content-between align-items-center experience">
-                            <span class="sectiontitle myprofiletext">Skills</span> &nbsp;
-                            <button class="btn btn-primary skill-button" type="button">Añadir Skill</button>
+                            <span class="skills_title">Skills</span>
+                            <button class="skill-button" type="button">+ Add Skill</button>
                         </h2><br>
                     </div>
                 </div>
 
                 <div class="profileInfo-resume">
                     <div class="d-flex flex-column p-3 py-5">
-                        <h2 class="text-left sectiontitle myprofiletext">Resume</h2>
+                        <h2 class="resume_title">Resume</h2>
+                        <button id="PDF_Btn" onclick="document.getElementById('pdf').click()"> <i class="fa fa-folder" id="icono_carpeta"></i> </button>
                         <input type="file" name="subir-pdf" accept="application/pdf,application/vnd.ms-excel" id="pdf">
-
-                        <div class="mt-5 text-right"><button class="btn btn-primary profile-button" type="button">Guardar Cambios</button></div>
+                        
                     </div>
                 </div>
 
@@ -95,6 +97,6 @@
         <div class="mt-5 text-right"><button class="btn btn-primary profile-button" type="button">Guardar Cambios</button></div>
         -->
         <!-- Archivo de Javascript -->
-        <script src="~/XAPP_js/perfil_code.js"></script>
+        <script src="/XAPP_js/perfil_code.js"></script>
     </html>
 </main>

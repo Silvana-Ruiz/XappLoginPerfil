@@ -144,15 +144,13 @@ body {
     grid-column: 1;
     border-radius: 30px 30px 0 0;
     background-color: pink; /**/
-    width: 32%;
-    height: 140%;
+    width: 40%;
+    height: 80%;
     left: 0;
     
 }
 .profileInfo-personal-data {
     display: flex;
- 
-    
     flex-direction: column;
     width:80%;
     margin:10%;
@@ -245,19 +243,44 @@ input[type=text], input[type=tel], input[type=email], textarea[type=input-field]
     background-color: orange; /***/
     position: absolute;
     top: 10%;
-    width:100%;
+    width: 88%;
+    height: 60%;
+    margin-left: 10%;
+    border-radius: 30px;
+}
+
+.skills_title {
+    margin-top: -30%;
+    margin-left: 2%;
+    color: red;
+    font-weight: bold;
+    font-size: 36px;
 }
 
 .profileInfo-resume {
     grid-column: 2;
     grid-row: 2;
     background-color: var(--lightgrey);
+    margin-top: 25%;
+    background-color: lightgreen; /***/
+    width: 88%;
+    margin-left: 10%;
+    border-radius: 30px;
+}
+
+.resume_title {
+    margin-top: -3%;
+    margin-left: 1%;
+    color: red;
+    font-weight: bold;
+    font-size: 36px;
 }
 
 .sectiontitle{
     color:var(--red);
 
 }
+
 /* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
 @media screen and (max-height: 450px) {
     .sidebar {
@@ -280,52 +303,75 @@ input[type=text], input[type=tel], input[type=email], textarea[type=input-field]
     border-color: #c86868
 }
 
+/* Boton para guardar cambios en el perfil */
 .profile-button {
-    background: rgb(226,36,50);
+    background: transparent;
     box-shadow: none;
-    border: none
+    border: none;
+    margin-left: 60%;
+    color: red;
+    font-size: 20px;
 }
 
     .profile-button:hover {
-        background: #27732b
+        background: transparent;
+        color: black;
+        box-shadow: none;
+        border: none;
     }
 
     .profile-button:focus {
-        background: #000000;
-        box-shadow: none
+        background: transparent;
+        box-shadow: none;
+        border: none;
     }
 
     .profile-button:active {
-        background: #000000;
+        background: transparent;
         box-shadow: none;
+        border: none;
     }
 
-.back:hover {
-    color: #00ff4c;
-    cursor: pointer
-}
 
+/* Titulo para los input text */
 
 .labels {
     font-size: 120%;
     color: #ff0000;
-    
 }
+
+/* Boton para agregar Skills */
 
 .skill-button {
-    background: rgb(255, 0, 0);
+    background: transparent;
     box-shadow: none;
-    border: none;
     cursor: pointer;
+    margin-top: 28%;
+    font-weight: bold;
+    margin-right: 1%;
 }
 
 
+/* Agregar Archivo PDF */
 
+#PDF_Btn {
+    background-color: transparent;
+    width: 10%;
+    height: 60px;
+    margin-top: 20%;
+    margin-left: 90%;
+}
+
+#icono_carpeta {
+    color: black;
+    font-size: 350%;
+}
 
 #pdf {
     margin-top: 6%;
+    width: 0%;
+    display: none;
 }
-
 
 /* PopUp de Añadir Skills */
 
