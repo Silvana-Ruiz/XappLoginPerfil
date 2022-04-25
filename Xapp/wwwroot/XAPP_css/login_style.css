@@ -1,0 +1,346 @@
+﻿﻿* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+body {
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+article,
+aside,
+details,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    text-decoration: none;
+}
+
+
+
+img {
+    border: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.bg-illustration {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: url("https://drive.google.com/uc?export=view&id=1OpGwdjlr2iC1KNanzcmz6178flh9qQZ2") no-repeat center center scroll;
+    background-size: unset;
+    margin-left: 22.5%;
+}
+
+
+.login {
+    max-height: 100%;
+    overflow-Y: auto;
+    float: left;
+    margin: 0 auto;
+    width: 50%;
+    margin-left: 10%;
+}
+
+    .login .formulario {
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+    }
+
+        .login .formulario h1 {
+            margin-top: 20%;
+            font-size: 280%;
+            font-weight: bolder;
+        }
+
+
+        .login .formulario .login-form {
+            margin-top: 24%;
+        }
+
+            .login .formulario .login-form form {
+                display: -ms-grid;
+                display: grid;
+            }
+
+                .login .formulario .login-form form input {
+                    font-size: 16px;
+                    font-weight: normal;
+                    background-color: #efefef;
+                    margin: 2.5%;
+                    height: 68px;
+                    border: 1px;
+                    border-radius: 26px;
+                    width: 90% auto;
+                }
+
+                .login .formulario .login-form form button[type=submit] {
+                    background: rgba(226, 36, 50, 1);
+                    border: none;
+                    margin-top: 17%;
+                    margin-left: 36%;
+                    width: 45%;
+                    height: 58px;
+                    text-transform: uppercase;
+                    color: rgb(255, 255, 255);
+                    border-radius: 40px;
+                    position: relative;
+                    z-index: 2;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+
+                    .login .formulario .login-form form button[type=submit]:hover::after {
+                        opacity: 1;
+                    }
+
+                    .login .formulario .login-form form button[type=submit]::after {
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        border-radius: 40px;
+                        opacity: 0;
+                        top: 0;
+                        left: 0;
+                        -webkit-transition: 0.3s ease-in-out;
+                        -o-transition: 0.3s ease-in-out;
+                        transition: 0.3s ease-in-out;
+                        right: 0;
+                        bottom: 0;
+                        background: rgba(0, 0, 0, 0.6);
+                    }
+
+        .login .formulario .remember-form {
+            position: relative;
+            margin-top: 5%;
+        }
+
+            .login .formulario .remember-form input[type=checkbox] {
+                margin-top: 0px;
+                height: 100%;
+                width: 6%;
+                border: none;
+                margin-left: 2%;
+                padding: inherit;
+                box-shadow: 0 0 0 1pt rgb(199, 15, 15);
+                outline: none;
+                transition: .1s;
+            }
+
+            .login .formulario .remember-form span {
+                font-size: 140%;
+                font-weight: normal;
+                position: absolute;
+                top: 0px;
+                color: #3B3B3B;
+                margin-left: 0%;
+            }
+
+
+        .login .formulario .forget-pass {
+            position: absolute;
+            left: 37.5%;
+            margin-top: 90%;
+        }
+
+        .login .formulario a {
+            font-size: 16px;
+            position: relative;
+            font-weight: normal;
+            color: #918F8F;
+        }
+
+            .login .formulario a::after {
+                content: "";
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                border-radius: 100px;
+                background: -webkit-linear-gradient(110deg, #f794a4 0%, #fdd6bd 100%);
+                background: -o-linear-gradient(110deg, #f794a4 0%, #fdd6bd 100%);
+                background: linear-gradient(-20deg, #f794a4 0%, #fdd6bd 100%);
+                bottom: -4px;
+                left: 0;
+                -webkit-transition: 0.3s;
+                -o-transition: 0.3s;
+                transition: 0.3s;
+                opacity: 0;
+                right: 0;
+            }
+
+        .login .formulario .forget-pass a:hover::after {
+            opacity: 1;
+        }
+
+.contra-button {
+    position: fixed;
+    background: white;
+    color: rgba(0, 0, 0);
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+}
+
+    .contra-button:hover {
+        background: white;
+        color: rgba(0, 0, 0, 0.5);
+        box-shadow: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .contra-button:focus {
+        background: white;
+        color: rgba(0, 0, 0, 0.5);
+        box-shadow: none;
+        border: none;
+        cursor: pointer;
+    }
+
+.login-form label {
+    margin-left: 0%;
+    font-size: 150%;
+}
+
+/* PopUp de Cambiar Contraseña */
+
+.modal-cont {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    overflow: auto
+}
+
+.modal-box {
+    width: 40%;
+    margin: 1.5% auto;
+    background-color: white;
+    position: center;
+    text-align: left;
+    height: auto;
+}
+
+    .modal-box .close {
+        position: absolute;
+        right: 30.5%;
+        top: 3.5%;
+        font-size: 300%;
+        font-weight: bolder;
+        cursor: pointer
+    }
+
+        .modal-box .close:hover,
+        .modal-box .close:focus {
+            color: #c6c6c6
+        }
+
+
+input[type=text] {
+    width: 100%;
+    border: 1px solid #d0d0d0;
+    display: block;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 20px;
+}
+
+
+.modal-box label,
+.modal-box .save-button,
+.modal-box input {
+    width: 95%;
+    display: block;
+    margin: 10px auto
+}
+
+.modal-box label {
+    font-size: 120%;
+}
+
+.modal-box .save-button {
+    margin-top: 16px;
+    margin-right: 20px;
+    cursor: pointer;
+    width: 20%;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    font-size: 25px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+
+
+.modal-box span {
+    float: right
+}
+
+.modal-cont {
+    display: none
+}
+
+.modal-box {
+    animation-name: zoom;
+    animation-duration: .7s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    border: 1px solid #b7b7b7;
+    border-radius: 20px;
+    box-shadow: none;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1680px) {
+    .bg-illustration {
+        width: 50%;
+        -webkit-animation: none;
+        animation: none;
+    }
+
+    .login {
+        width: 75%;
+    }
+}
+
+#titulo_contra {
+    margin: auto;
+    text-align: center;
+    display: block;
+    margin-top: 1%;
+}

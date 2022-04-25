@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+<link href="/XAPP_css/login_style.css" rel="stylesheet" type="text/css"> 
+
+<div class="parent clearfix" style="font-family: Poppins">
+    <div class="bg-illustration"></div>
+
+
+    <div class="login">
+      <div class="formulario">
+        <h1>Log In</h1>
+		    <h5>¡Welcome Xapien! </h5>
+
+        <div class="login-form">
+          <form action="">
+            <label for="">Correo electrónico</label>
+            <input type="email" placeholder="">
+            <label for="">Contraseña</label>
+            <input type="password" placeholder="">
+
+            <div class="remember-form">
+              <input type="checkbox">
+              <span>Mantenerme conectado</span>
+            </div>
+            <button type="submit">Log In</button>
+            <div class="forget-pass">
+              <button class="btn btn-primary contra-button" type="button">¿Olvidaste tu contraseña?</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- PopUp -->
+      <div class="modal-cont">
+        <div class="modal-box">
+            <span class="close">&times;</span>
+            <form action="" class="login-box">
+                <h2 id="titulo_contra"> Cambiar Contraseña </h2>
+                <label for="">Correo:</label>
+                <input type="text" class="nameskill" id="field1" required>
+                <label for="">Contraseña nueva:</label>
+                <input type="text" class="contra_nueva" value="" required>
+                <label for="">Confirmar contraseña nueva:</label>
+                <input type="text" class="contra_nueva" value="" required><br>
+                <button class="save-button">Save</button>
+            </form>
+        </div>
+      </div>
+
+    </div>
+
+</div>
+
+<!-- Archivo de Javascript -->
+<script src="/XAPP_js/login_code.js"></script>
