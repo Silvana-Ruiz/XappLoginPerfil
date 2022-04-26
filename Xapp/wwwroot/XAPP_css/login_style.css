@@ -60,8 +60,6 @@ h5,
 h6,
 p,
 a {
-    -ms-word-wrap: break-word;
-    word-wrap: break-word;
     text-decoration: none;
 }
 
@@ -79,9 +77,8 @@ img {
 .loginandimg {
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
     grid-row: 1;
-    gap: 0 5%;
 }
 
 /**LOGIN**/
@@ -89,11 +86,12 @@ img {
     display: flex;
     flex-direction: column;
     margin: 0;
+    grid-column:1;
 }
 
 .loginabsolute {
     position: absolute;
-    top: 19%;
+    top: 12%;
     left: 9%;
     align-items: flex-start;
 }
@@ -157,18 +155,22 @@ button[type=submit] {
     font-size: 20px;
 }
 
-.contra-button {
-    width:100%;
-    font-size:1.8rem;
-    position: absolute;
-    top:105%;
-    left:45%;
-    background: white;
-    color: rgba(0, 0, 0);
-    box-shadow: none;
-    border: none;
-    cursor: pointer;
-}
+    button[type=submit]:hover{
+        transform:scale(1.05);
+    }
+
+    .contra-button {
+        width: 100%;
+        font-size: 1.8rem;
+        position: absolute;
+        top: 105%;
+        left: 45%;
+        background: white;
+        color: rgba(0, 0, 0);
+        box-shadow: none;
+        border: none;
+        cursor: pointer;
+    }
 
     .contra-button:hover {
         background: white;
@@ -187,6 +189,7 @@ button[type=submit] {
     }
 
 /* POPUP TO CHANGE PASSWORD */
+/*Background of PopUp*/
 .modal-cont {
     position: absolute;
     height: 100%;
@@ -196,28 +199,31 @@ button[type=submit] {
     left: 0;
     overflow: auto;
     z-index: 100;
+   
 }
 
+/*PopUp*/
 .modal-box {
     width: 50%;
+    height: 65%;
     margin: 1.5% auto;
-    background-color: white;
+    background-color: var(--lightgrey);
     position: center;
     text-align: left;
-    height: auto;
-    position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    border-radius: 40px;
+    position: relative;
 }
 
     .modal-box .close {
         position: absolute;
-        right: 30.5%;
+        right: 5%;
         top: 3.5%;
-        font-size: 300%;
-        font-weight: bolder;
+        font-size: 320%;
+        font-weight: lighter;
         cursor: pointer
     }
 
@@ -226,12 +232,24 @@ button[type=submit] {
             color: #c6c6c6
         }
 
+/*Content of the PopUp*/
+
+.login-box {
+    width:40%;
+    position:absolute;
+    left:10%;
+    top:8%;
+   
+
+}
+.changepwd {
+    font-size: 3.5rem;
+    width:120%;
+}
 
 
 label.modal-cont, input[type="email"].modal-cont, input[type="password"].modal-cont {
-    width: 20%;
-    padding: 6% 20px;
-    margin: 8px 0;
+    width: 100%;
     display: block;
     box-sizing: border-box;
     box-shadow: 0.3px 0.3px 1.3px rgba(0, 0, 0, 0.028), 0.9px 1.1px 4.5px rgba(0, 0, 0, 0.042), 4px 5px 20px rgba(0, 0, 0, 0.07);
@@ -240,9 +258,38 @@ label.modal-cont, input[type="email"].modal-cont, input[type="password"].modal-c
     font-size: 1.8rem;
     background-color: var(--lightgrey);
     box-shadow: 3px 1px 10px lightgrey;
+    
 }
 
+.modal-box .save-button {
+    margin-top: 10%;
+    cursor: pointer;
+    width: 60%;
+    height: 6rem;
+    border: none;
+    border-radius: 15px;
+    font-size: 25px;
+    background-color: var(--red);
+    color: white;
+    position:absolute;
+    top:90%;
+    left:140%;
+}
 
+ /**IMAGE**/
+.imglogin {
+    grid-column: 2;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    height: auto;
+    max-width: 55%;
+    background-position: left;
+    background-size: auto 100%;
+    margin: 0;
+    padding: 0;
+ 
+}
 /*
 .modal-box label,
 .modal-box .save-button,
@@ -298,13 +345,6 @@ label.modal-cont, input[type="email"].modal-cont, input[type="password"].modal-c
     .login {
         width: 75%;
     }
-}
-
-#titulo_contra {
-    margin: auto;
-    text-align: center;
-    display: block;
-    margin-top: 1%;
 }
 
 
@@ -456,31 +496,6 @@ label.modal-cont, input[type="email"].modal-cont, input[type="password"].modal-c
         .login .formulario .forget-pass a:hover::after {
             opacity: 1;
         }
-
-.contra-button {
-    position: fixed;
-    background: white;
-    color: rgba(0, 0, 0);
-    box-shadow: none;
-    border: none;
-    cursor: pointer;
-}
-
-    .contra-button:hover {
-        background: white;
-        color: rgba(0, 0, 0, 0.5);
-        box-shadow: none;
-        border: none;
-        cursor: pointer;
-    }
-
-    .contra-button:focus {
-        background: white;
-        color: rgba(0, 0, 0, 0.5);
-        box-shadow: none;
-        border: none;
-        cursor: pointer;
-    }
 
 .login-form label {
     margin-left: 0%;
