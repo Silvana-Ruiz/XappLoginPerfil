@@ -86,7 +86,7 @@ img {
     display: flex;
     flex-direction: column;
     margin: 0;
-    grid-column:1;
+    grid-column: 1;
 }
 
 .loginabsolute {
@@ -135,10 +135,6 @@ input[type=email], input[type=password] {
 label, input[type=email], input[type=password] {
     margin-bottom: 5%;
 }
-.remember-form-text {
-    font-size: 1.8rem;
-    margin: 1.8%;
-}
 
 button[type=submit] {
     background: rgba(226, 36, 50, 1);
@@ -149,28 +145,27 @@ button[type=submit] {
     height: 58px;
     color: rgb(255, 255, 255);
     border-radius: 40px;
-  
     z-index: -1;
     font-weight: normal;
     font-size: 20px;
 }
 
-    button[type=submit]:hover{
-        transform:scale(1.05);
+    button[type=submit]:hover {
+        transform: scale(1.05);
     }
 
-    .contra-button {
-        width: 100%;
-        font-size: 1.8rem;
-        position: absolute;
-        top: 105%;
-        left: 45%;
-        background: white;
-        color: rgba(0, 0, 0);
-        box-shadow: none;
-        border: none;
-        cursor: pointer;
-    }
+.contra-button {
+    width: 100%;
+    font-size: 1.8rem;
+    position: absolute;
+    top: 105%;
+    left: 45%;
+    background: white;
+    color: rgba(0, 0, 0);
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+}
 
     .contra-button:hover {
         background: white;
@@ -211,9 +206,10 @@ button[type=submit] {
     .modal-box input[type=email], .modal-box input[type=password] {
         padding-bottom: 4%;
     }
-}  
-.modal-box label{
-    margin-bottom:3%;
+}
+
+.modal-box label {
+    margin-bottom: 3%;
 }
 
 .modal-cont {
@@ -225,8 +221,6 @@ button[type=submit] {
     left: 0;
     overflow: hidden;
     z-index: 100;
-    
-   
 }
 
 /*PopUp*/
@@ -241,8 +235,6 @@ button[type=submit] {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     position: relative;
-    
-  
 }
 
     .modal-box .close {
@@ -273,7 +265,7 @@ button[type=submit] {
     padding-left: 5%;
     padding-right: 5%;
     border-radius: 30px;
-    margin-bottom:0;
+    margin-bottom: 0;
 }
 
 
@@ -282,15 +274,12 @@ label.modal-cont, input[type="email"].modal-cont, input[type="password"].modal-c
     width: 100%;
     display: block;
     box-sizing: border-box;
-    box-shadow: 0.3px 0.3px 1.3px rgba(0, 0, 0, 0.028),
-        0.9px 1.1px 4.5px rgba(0, 0, 0, 0.042),
-        4px 5px 20px rgba(0, 0, 0, 0.07);
+    box-shadow: 0.3px 0.3px 1.3px rgba(0, 0, 0, 0.028), 0.9px 1.1px 4.5px rgba(0, 0, 0, 0.042), 4px 5px 20px rgba(0, 0, 0, 0.07);
     border-radius: 15px;
     border: none;
     font-size: 1.8rem;
     background-color: var(--lightgrey);
     box-shadow: 3px 1px 10px lightgrey;
-    
 }
 
 .modal-box .save-button {
@@ -304,16 +293,15 @@ label.modal-cont, input[type="email"].modal-cont, input[type="password"].modal-c
     background-color: var(--red);
     color: white;
     margin-top: 0;
-    position:absolute;
-    right:5%;
-    bottom:6%;
-    
+    position: absolute;
+    right: 5%;
+    bottom: 6%;
 }
 
-       
-        
-        
-    }
+
+
+
+
 button::before,
 button::after {
     content: '';
@@ -323,6 +311,7 @@ button::after {
 .modal-cont {
     display: none
 }
+
 @media(max-height:800px) {
     .login-box {
         height: 120%;
@@ -334,32 +323,119 @@ button::after {
         right: 4%;
     }
 }
-    .changepwd {
-        font-size: 3.5rem;
-        width: 120%;
-    }
 
-    /**IMAGE**/
-    .imglogin {
-        grid-column: 2;
-        position: absolute;
-        top: 0;
-        right: 0px;
-        max-width: 55%;
-        background-position: left;
-        background-size: auto 100%;
-        height: 100%; /*max-height: auto%;*/
-        overflow: hidden;
-    }
+.changepwd {
+    font-size: 3.5rem;
+    width: 120%;
+}
 
-    img {
-        object-fit: contain;
-        width: 100%;
-        height: auto;
-    }
+/**IMAGE**/
+.imglogin {
+    grid-column: 2;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    max-width: 55%;
+    background-position: left;
+    background-size: auto 100%;
+    height: 100%; /*max-height: auto%;*/
+    overflow: hidden;
+}
+
+img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+}
+
+/**CHECKBOX**/
+.stayconnected{
+    display:flex;
+    align-self:center;
+}
+
+.stayconnected h2{
+    font-size:1.8rem;
+   
+    font-weight:normal;
+    margin-left:5%;
+}
+
+.remember-form {
+    display: block;
+    position: relative;
+    padding-left: 0;
+    margin-bottom: 2%;
+    cursor: pointer;
+}
+
+ 
+
+/* Hide the default checkbox */
+input[type=checkbox] {
+    visibility: hidden;
+}
+
+/* Creating a custom checkbox
+        based on demand */
+.remember-form-mark {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    height: 40%;
+    width: 110%;
+    background-color: black;
+}
 
 
-    /*
+/* Specify the background color to be
+        shown when hovering over checkbox */
+.remember-form:hover input ~ .remember-form-mark {
+    background-color: yellow;
+}
+
+/* Specify the background color to be
+        shown when checkbox is active */
+.remember-form input:active ~ .remember-form-mark {
+    background-color: red;
+}
+
+/* Specify the background color to be
+        shown when checkbox is checked */
+.remember-form input:checked ~ .remember-form-mark {
+    background-color: green;
+}
+
+/* Checkmark to be shown in checkbox */
+/* It is not be shown when not checked */
+.remember-form-mark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Display checkmark when checked */
+.remember-form input:checked ~ .remember-form-mark:after {
+    display: block;
+}
+
+/* Styling the checkmark using webkit */
+/* Rotated the rectangle by 45 degree and 
+        showing only two border to make it look
+        like a tickmark */
+.remember-form .remember-form-mark:after {
+    left: 8px;
+    bottom: 5px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*
 .modal-box label,
 .modal-box .save-button,
 .modal-box input {
