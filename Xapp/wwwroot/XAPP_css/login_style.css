@@ -386,31 +386,30 @@ input[type=checkbox] {
     width: 110%;
     background-color: var(--grey);
     outline: solid 0.1rem red;
+    
 }
 
 /* Specify the background color to be
         shown when checkbox is active */
 .remember-form input:active ~ .remember-form-mark {
-    background-color: red;
+    background-color: var(--grey);
+   
 }
 
-/* Specify the background color to be
-        shown when checkbox is checked */
-.remember-form input:checked ~ .remember-form-mark {
-    background-color: var(--grey);
-}
 
 /* Checkmark to be shown in checkbox */
-/* It is not be shown when not checked */
 .remember-form-mark:after {
     content: "";
     position: absolute;
     display: none;
+    opacity:0;
+    color: black;
 }
 
 /* Display checkmark when checked */
 .remember-form input:checked ~ .remember-form-mark:after {
     display: block;
+    
 }
 
 /* Styling the checkmark using webkit */
@@ -427,7 +426,9 @@ input[type=checkbox] {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+    
 }
+
 
 /*
 .modal-box label,
