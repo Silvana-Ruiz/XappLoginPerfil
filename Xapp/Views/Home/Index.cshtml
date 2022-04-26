@@ -1,5 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    Layout = null;
+
 }
 <!DOCTYPE html>
 <html>
@@ -31,7 +33,7 @@
 
                                 <div class="remember-form">
                                     <input type="checkbox">
-                                    <span>Mantenerme conectado</span>
+                                    <span class="remember-form-text">Mantenerme conectado</span>
                                 </div>
                                 <button type="submit">Log In</button>
                                 <div class="forget-pass">
@@ -45,9 +47,9 @@
             </div>
 
             <div class="imgxipe">
-                <!--<img src="https://drive.google.com/uc?export=view&id=1OpGwdjlr2iC1KNanzcmz6178flh9qQZ2" alt="XIPE Employees" />
-
-                -->
+              <!-- <img src="https://drive.google.com/uc?export=view&id=1OpGwdjlr2iC1KNanzcmz6178flh9qQZ2" alt="XIPE Employees" />
+              --> 
+                
             </div>
         </section>
 
@@ -58,11 +60,11 @@
                 <form action="" class="login-box">
                     <h2 id="titulo_contra"> Cambiar Contraseña </h2>
                     <label for="">Correo:</label>
-                    <input type="text" class="nameskill" id="field1" required>
+                    <input type="email" class="emailnewpwd" id="field1" required>
                     <label for="">Contraseña nueva:</label>
-                    <input type="text" class="contra_nueva" value="" required>
+                    <input type="password" class="contra_nueva" value="" required>
                     <label for="">Confirmar contraseña nueva:</label>
-                    <input type="text" class="contra_nueva" value="" required><br>
+                    <input type="password" class="contra_nueva" value="" required><br>
                     <button class="save-button">Save</button>
                 </form>
             </div>

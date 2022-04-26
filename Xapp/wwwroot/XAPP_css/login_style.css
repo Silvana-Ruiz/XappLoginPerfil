@@ -93,8 +93,8 @@ img {
 
 .loginabsolute {
     position: absolute;
-    top: 17%;
-    left: 8%;
+    top: 19%;
+    left: 9%;
     align-items: flex-start;
 }
 
@@ -103,7 +103,7 @@ img {
     font-size: 4rem;
     font-weight: bold;
     margin: 0;
-    margin-bottom: 2%;
+    margin-bottom: 9%;
 }
 
 .login-welcome {
@@ -116,14 +116,121 @@ img {
 
 /*Login form*/
 .login-form label {
-    font-size: 1.8rem;
+    font-size: 2rem;
     display: block;
-   
 }
 
 input[type=email], input[type=password] {
     width: 200%;
-    padding: 12px 20px;
+    padding: 6% 20px;
+    margin: 8px 0;
+    display: block;
+    box-sizing: border-box;
+    box-shadow: 0.3px 0.3px 1.3px rgba(0, 0, 0, 0.028), 0.9px 1.1px 4.5px rgba(0, 0, 0, 0.042), 4px 5px 20px rgba(0, 0, 0, 0.07);
+    border-radius: 15px;
+    border: none;
+    font-size: 1.8rem;
+    background-color: var(--lightgrey);
+    box-shadow: 3px 1px 10px lightgrey;
+}
+
+label, input[type=email], input[type=password] {
+    margin-bottom: 2rem;
+}
+.remember-form-text {
+    font-size: 1.8rem;
+    margin: 1.8%;
+}
+
+button[type=submit] {
+    background: rgba(226, 36, 50, 1);
+    border: none;
+    margin-top: 17%;
+    margin-left: 36%;
+    width: 120%;
+    height: 58px;
+    color: rgb(255, 255, 255);
+    border-radius: 40px;
+  
+    z-index: -1;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.contra-button {
+    width:100%;
+    font-size:1.8rem;
+    position: absolute;
+    top:105%;
+    left:45%;
+    background: white;
+    color: rgba(0, 0, 0);
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+}
+
+    .contra-button:hover {
+        background: white;
+        color: rgba(0, 0, 0, 0.5);
+        box-shadow: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .contra-button:focus {
+        background: white;
+        color: rgba(0, 0, 0, 0.5);
+        box-shadow: none;
+        border: none;
+        cursor: pointer;
+    }
+
+/* POPUP TO CHANGE PASSWORD */
+.modal-cont {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    overflow: auto;
+    z-index: 100;
+}
+
+.modal-box {
+    width: 50%;
+    margin: 1.5% auto;
+    background-color: white;
+    position: center;
+    text-align: left;
+    height: auto;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+    .modal-box .close {
+        position: absolute;
+        right: 30.5%;
+        top: 3.5%;
+        font-size: 300%;
+        font-weight: bolder;
+        cursor: pointer
+    }
+
+        .modal-box .close:hover,
+        .modal-box .close:focus {
+            color: #c6c6c6
+        }
+
+
+
+label.modal-cont, input[type="email"].modal-cont, input[type="password"].modal-cont {
+    width: 20%;
+    padding: 6% 20px;
     margin: 8px 0;
     display: block;
     box-sizing: border-box;
@@ -137,6 +244,69 @@ input[type=email], input[type=password] {
 
 
 /*
+.modal-box label,
+.modal-box .save-button,
+.modal-box input {
+    width: 95%;
+    display: block;
+    margin: 10px auto
+}
+
+.modal-box label {
+    font-size: 120%;
+}
+
+.modal-box .save-button {
+    margin-top: 16px;
+    margin-right: 20px;
+    cursor: pointer;
+    width: 20%;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    font-size: 25px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+
+
+.modal-box span {
+    float: right
+}
+
+.modal-cont {
+    display: none
+}
+
+.modal-box {
+    animation-name: zoom;
+    animation-duration: .7s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    border: 1px solid #b7b7b7;
+    border-radius: 20px;
+    box-shadow: none;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1680px) {
+    .bg-illustration {
+        width: 50%;
+        -webkit-animation: none;
+        animation: none;
+    }
+
+    .login {
+        width: 75%;
+    }
+}
+
+#titulo_contra {
+    margin: auto;
+    text-align: center;
+    display: block;
+    margin-top: 1%;
+}
+
 
 .bg-illustration {
     position: fixed;
@@ -318,112 +488,3 @@ input[type=email], input[type=password] {
 }
 
     */
-
-/* PopUp de Cambiar Contraseña */
-
-.modal-cont {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    top: 0;
-    left: 0;
-    overflow: auto
-}
-
-.modal-box {
-    width: 40%;
-    margin: 1.5% auto;
-    background-color: white;
-    position: center;
-    text-align: left;
-    height: auto;
-}
-
-    .modal-box .close {
-        position: absolute;
-        right: 30.5%;
-        top: 3.5%;
-        font-size: 300%;
-        font-weight: bolder;
-        cursor: pointer
-    }
-
-        .modal-box .close:hover,
-        .modal-box .close:focus {
-            color: #c6c6c6
-        }
-
-
-input[type=text] {
-    width: 100%;
-    border: 1px solid #d0d0d0;
-    display: block;
-    padding: 8px;
-    margin: 5px 0;
-    border-radius: 20px;
-}
-
-
-.modal-box label,
-.modal-box .save-button,
-.modal-box input {
-    width: 95%;
-    display: block;
-    margin: 10px auto
-}
-
-.modal-box label {
-    font-size: 120%;
-}
-
-.modal-box .save-button {
-    margin-top: 16px;
-    margin-right: 20px;
-    cursor: pointer;
-    width: 20%;
-    height: 50px;
-    border: none;
-    border-radius: 30px;
-    font-size: 25px;
-    background-color: rgb(255, 0, 0);
-    color: white;
-}
-
-
-.modal-box span {
-    float: right
-}
-
-.modal-cont {
-    display: none
-}
-
-.modal-box {
-    animation-name: zoom;
-    animation-duration: .7s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
-    border: 1px solid #b7b7b7;
-    border-radius: 20px;
-    box-shadow: none;
-}
-
-@media only screen and (min-width: 1024px) and (max-width: 1680px) {
-    .bg-illustration {
-        width: 50%;
-        -webkit-animation: none;
-        animation: none;
-    }
-
-    .login {
-        width: 75%;
-    }
-}
-
-#titulo_contra {
-    margin: auto;
-    text-align: center;
-    display: block;
-    margin-top: 1%;
-}
