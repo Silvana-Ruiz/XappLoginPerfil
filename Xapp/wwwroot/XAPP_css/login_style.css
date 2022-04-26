@@ -384,14 +384,8 @@ input[type=checkbox] {
     left: 0;
     height: 40%;
     width: 110%;
-    background-color: black;
-}
-
-
-/* Specify the background color to be
-        shown when hovering over checkbox */
-.remember-form:hover input ~ .remember-form-mark {
-    background-color: yellow;
+    background-color: var(--grey);
+    outline: solid 0.1rem red;
 }
 
 /* Specify the background color to be
@@ -403,7 +397,7 @@ input[type=checkbox] {
 /* Specify the background color to be
         shown when checkbox is checked */
 .remember-form input:checked ~ .remember-form-mark {
-    background-color: green;
+    background-color: var(--grey);
 }
 
 /* Checkmark to be shown in checkbox */
@@ -428,7 +422,7 @@ input[type=checkbox] {
     bottom: 5px;
     width: 6px;
     height: 12px;
-    border: solid white;
+    border: solid black;
     border-width: 0 4px 4px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
