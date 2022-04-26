@@ -78,7 +78,7 @@ img {
     display: grid;
     width: 100%;
     grid-template-columns: 50% 50%;
-    grid-row: 1;
+    column-gap: 8%;
 }
 
 /**LOGIN**/
@@ -261,20 +261,20 @@ label.modal-cont, input[type="email"].modal-cont, input[type="password"].modal-c
     
 }
 
-.modal-box .save-button {
-    margin-top: 10%;
-    cursor: pointer;
-    width: 60%;
-    height: 6rem;
-    border: none;
-    border-radius: 15px;
-    font-size: 25px;
-    background-color: var(--red);
-    color: white;
-    position:absolute;
-    top:90%;
-    left:140%;
-}
+    .modal-box .save-button {
+        margin-top: 10%;
+        cursor: pointer;
+        width: 60%;
+        height: 6rem;
+        border: none;
+        border-radius: 15px;
+        font-size: 25px;
+        background-color: var(--red);
+        color: white;
+        position: absolute;
+        top: 90%;
+        left: 140%;
+    }
 
  /**IMAGE**/
 .imglogin {
@@ -282,14 +282,18 @@ label.modal-cont, input[type="email"].modal-cont, input[type="password"].modal-c
     position: absolute;
     top: 0;
     right: 0px;
-    height: auto;
     max-width: 55%;
     background-position: left;
     background-size: auto 100%;
     margin: 0;
     padding: 0;
- 
+    max-height: 100%; /*max-height: auto%;*/
+    object-fit: contain;
+    overflow: hidden;
 }
+
+
+
 /*
 .modal-box label,
 .modal-box .save-button,
