@@ -92,7 +92,7 @@ img {
 .loginabsolute {
     position: absolute;
     top: 12%;
-    left: 9%;
+    left: 7%;
     align-items: flex-start;
 }
 
@@ -252,7 +252,9 @@ label.modal-cont, input[type="email"].modal-cont, input[type="password"].modal-c
     width: 100%;
     display: block;
     box-sizing: border-box;
-    box-shadow: 0.3px 0.3px 1.3px rgba(0, 0, 0, 0.028), 0.9px 1.1px 4.5px rgba(0, 0, 0, 0.042), 4px 5px 20px rgba(0, 0, 0, 0.07);
+    box-shadow: 0.3px 0.3px 1.3px rgba(0, 0, 0, 0.028),
+        0.9px 1.1px 4.5px rgba(0, 0, 0, 0.042),
+        4px 5px 20px rgba(0, 0, 0, 0.07);
     border-radius: 15px;
     border: none;
     font-size: 1.8rem;
@@ -285,13 +287,16 @@ label.modal-cont, input[type="email"].modal-cont, input[type="password"].modal-c
     max-width: 55%;
     background-position: left;
     background-size: auto 100%;
-    margin: 0;
-    padding: 0;
-    max-height: 100%; /*max-height: auto%;*/
-    object-fit: contain;
+    height: 100%; /*max-height: auto%;*/
     overflow: hidden;
+    
 }
 
+img {
+    object-fit: contain;
+    width:100%;
+    height:auto;
+}
 
 
 /*
