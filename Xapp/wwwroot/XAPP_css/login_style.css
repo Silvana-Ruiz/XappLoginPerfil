@@ -1,4 +1,4 @@
-﻿* {
+﻿﻿* {
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
@@ -265,7 +265,6 @@ button[type=submit] {
     padding-right: 5%;
     border-radius: 30px;
     margin-bottom: 0;
-   
 }
 
 @media(max-height:800px) {
@@ -280,7 +279,7 @@ button[type=submit] {
 }
 
 .changepwd {
-    margin-top:5%;
+    margin-top: 5%;
     font-size: 3.5rem;
     width: 120%;
 }
@@ -309,9 +308,10 @@ label.modal-cont, input[type="email"].modal-cont, input[type="password"].modal-c
     color: white;
     margin-top: 0;
     position: absolute;
-    bottom: 6%;
+    bottom: 2%;
     right: 4%;
 }
+
 button::before,
 button::after {
     content: '';
@@ -328,7 +328,6 @@ button::after {
     }
 
     .modal-box .save-button {
-      
         bottom: 3%;
         right: 4%;
     }
@@ -370,13 +369,12 @@ img {
         margin-left: 5%;
     }
 
-.remember-form{
-    display:flex;
-    flex-direction:row;
-    width:100%;
-
+.remember-form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 input[type=checkbox] {
-    align-self:center;
+    align-self: center;
 }
