@@ -7,6 +7,10 @@
     --grey: #f2f0f0;
     --lightgrey: #f6f6f6;
     --red: #e22432;
+    --green: #aff7c9;
+    --orange: #f5b57d;
+    --blue: #aeebff;
+    --purple: #dfaeff;
 }
 
 html {
@@ -163,7 +167,7 @@ body {
     position: absolute;
     top: 72%;
     left: 0;
-    background-color: white; 
+    background-color: white;
     border-radius: 0 0 30px 30px;
     width: 100%;
     padding-top: 8%;
@@ -298,7 +302,7 @@ input[type=text], input[type=tel], input[type=email], textarea[type=input-field]
 
     .form-control:focus {
         box-shadow: none;
-        border-color: #c86868
+        border-color: none;
     }
 
 /* Boton para guardar cambios en el perfil */
@@ -398,7 +402,7 @@ input[type=text], input[type=tel], input[type=email], textarea[type=input-field]
     background-color: var(--grey);
     text-align: left;
     top: 20%;
-    left:10%;
+    left: 10%;
     animation-name: zoom;
     animation-duration: .7s;
     animation-fill-mode: forwards;
@@ -410,23 +414,22 @@ input[type=text], input[type=tel], input[type=email], textarea[type=input-field]
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     position: relative;
-    padding:5%;
+    padding: 5%;
 }
 
     .modal-box .close {
         position: absolute;
-        right: 16px;
-        top: 5px;
-        font-size: 50px;
-        font-weight: bolder;
+        right: 4%;
+        top: 5%;
+        font-size: 320%;
+        font-weight: lighter;
         cursor: pointer
     }
 
         .modal-box .close:hover,
         .modal-box .close:focus {
-            color: #c6c6c6
+            color: #c6c6c6;
         }
-
 
     .modal-box label,
     .modal-box .save-button,
@@ -435,11 +438,30 @@ input[type=text], input[type=tel], input[type=email], textarea[type=input-field]
         display: block;
         margin: 10px auto;
         border-radius: 40px;
+        margin-left: 0;
+    }
+
+    .modal-box input {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        box-shadow: 0.3px 0.3px 1.3px rgba(0, 0, 0, 0.028), 0.9px 1.1px 4.5px rgba(0, 0, 0, 0.042), 4px 5px 20px rgba(0, 0, 0, 0.07);
+        border-radius: 15px;
+        border: none;
+        font-size: 1.8rem;
+        background-color: var(--lightgrey);
+        box-shadow: 3px 1px 10px lightgrey;
     }
 
     .modal-box label {
-        font-size: 24px;
+        font-size: 1.8rem;
+        margin-top: 4%;
+        margin-bottom: 3%;
     }
+
+        .modal-box label.skilllevel {
+            margin-top: 4%;
+        }
 
     .modal-box .save-button {
         margin-top: 16px;
@@ -470,14 +492,48 @@ input[type=text], input[type=tel], input[type=email], textarea[type=input-field]
     display: none
 }
 
-h1 {
-    margin: auto;
-    text-align: left;
-    display: block;
-    margin-top: 10px;
-    color: black;
-    font-size: 40px;
+
+@media(max-height:800px) {
+    .login-box {
+        height: 120%;
+    }
+
+    .modal-box .save-button {
+        bottom: 3%;
+        right: 4%;
+    }
+}
+
+
+.skilltitle {
+    margin-top: 0%;
+    position: absolute;
+    top: 10%;
+    font-size: 3.5rem;
+    width: 120%;
+    font-size: 3.5rem;
     font-weight: bold;
+    width: 120%;
+}
+
+
+
+label.login-box {
+    font-size: 1.8rem;
+}
+
+.skillname {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    box-shadow: 0.3px 0.3px 1.3px rgba(0, 0, 0, 0.028),
+        0.9px 1.1px 4.5px rgba(0, 0, 0, 0.042),
+        4px 5px 20px rgba(0, 0, 0, 0.07);
+    border-radius: 2%;
+    border: none;
+    font-size: 1.8rem;
+    background-color: var(--lightgrey);
+    box-shadow: 3px 1px 10px lightgrey;
 }
 
 @keyframes zoom {
@@ -493,27 +549,41 @@ h1 {
 
 /*SKILLS*/
 #skill_pill {
-    color: rgb(0, 0, 0);
+    color: black;
     box-shadow: none;
     border: none;
     cursor: pointer;
     margin-left: 15px;
-    border-radius: 16px;
-    font-size: 18px;
+    border-radius: 12px;
+    font-size: 1.7rem;
+    width: auto;
+    margin-bottom: 2%;
+    padding: 1% 2% 1% 2%;
+    box-shadow: 0.1px 0.2px 2.2px rgba(0, 0, 0, 0.02),
+        0.1px 0.6px 5.3px rgba(0, 0, 0, 0.028),
+        0.3px 1.1px 10px rgba(0, 0, 0, 0.035),
+        0.4px 2px 17.9px rgba(0, 0, 0, 0.042),
+        0.8px 3.8px 33.4px rgba(0, 0, 0, 0.05),
+        2px 9px 80px rgba(0, 0, 0, 0.07);
 }
 
-.basic {
-    background: #36C895;
+#skill_pill:hover{
+    transform: scale(1.1);
+}
+
+#skill_pill.basic {
+    background-color: var(--green);
+    margin-left: 0;
 }
 
 .medium {
-    background: #DBAA50;
+    background-color: var(--orange);
 }
 
 .advanced {
-    background: #53C7E7;
+    background-color: var(--blue);
 }
 
 .expert {
-    background: #d478cb;
+    background-color: var(--purple);
 }
