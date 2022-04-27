@@ -388,15 +388,17 @@ input[type=text], input[type=tel], input[type=email], textarea[type=input-field]
     top: 0;
     left: 0;
     overflow: auto;
+    z-index: 100;
 }
 
 .modal-box {
-    width: 40%;
-    margin: 30px auto;
-    background-color: var(--lightgrey);
-    position: center;
+    width: 50%;
+    height: 60%;
+    margin: 1.5% auto;
+    background-color: var(--grey);
     text-align: left;
-    height: auto;
+    top: 20%;
+    left:10%;
     animation-name: zoom;
     animation-duration: .7s;
     animation-fill-mode: forwards;
@@ -404,6 +406,11 @@ input[type=text], input[type=tel], input[type=email], textarea[type=input-field]
     border: 1px solid #b7b7b7;
     border-radius: 40px;
     box-shadow: none;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: relative;
+    padding:5%;
 }
 
     .modal-box .close {
