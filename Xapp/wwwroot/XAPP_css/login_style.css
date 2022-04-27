@@ -1,4 +1,4 @@
-﻿﻿
+﻿
 * {
     margin: 0;
     padding: 0;
@@ -349,295 +349,81 @@ img {
 }
 
 /**CHECKBOX**/
-.stayconnected{
-    display:flex;
-    align-self:center;
+.stayconnected {
+    display: flex;
+    align-self: center;
 }
 
-.stayconnected h2{
-    font-size:1.8rem;
-   
-    font-weight:normal;
-    margin-left:5%;
-}
+    .stayconnected h2 {
+        font-size: 1.8rem;
+        font-weight: normal;
+        margin-left: 5%;
+    }
 
+/* Customize the label (the container) */
 .remember-form {
     display: block;
     position: relative;
-    padding-left: 0;
-    margin-bottom: 2%;
+    padding-left: 35px;
+    margin-bottom: 12px;
     cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
- 
+    /* Hide the browser's default checkbox */
+    .remember-form input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
 
-/* Hide the default checkbox */
-input[type=checkbox] {
-    visibility: hidden;
-}
-
-/* Creating a custom checkbox
-        based on demand */
-.remember-form-mark {
+/* Create a custom checkbox */
+.checkmark {
     position: absolute;
-    top: 35%;
+    top: 0;
     left: 0;
-    height: 40%;
-    width: 110%;
-    background-color: var(--grey);
-    outline: solid 0.1rem red;
-    
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
 }
 
-/* Specify the background color to be
-        shown when checkbox is active */
-.remember-form input:active ~ .remember-form-mark {
-    background-color: var(--grey);
-   
+/* On mouse-over, add a grey background color */
+.remember-form:hover input ~ .checkmark {
+    background-color: #ccc;
 }
 
+/* When the checkbox is checked, add a blue background */
+.remember-form input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
 
-/* Checkmark to be shown in checkbox */
-.remember-form-mark:after {
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
     content: "";
     position: absolute;
     display: none;
-    opacity:0;
-    color: black;
 }
 
-/* Display checkmark when checked */
-.remember-form input:checked ~ .remember-form-mark:after {
+/* Show the checkmark when checked */
+.remember-form input:checked ~ .checkmark:after {
     display: block;
-    
 }
 
-/* Styling the checkmark using webkit */
-/* Rotated the rectangle by 45 degree and 
-        showing only two border to make it look
-        like a tickmark */
-.remember-form .remember-form-mark:after {
-    left: 8px;
-    bottom: 5px;
-    width: 6px;
-    height: 12px;
-    border: solid black;
-    border-width: 0 4px 4px 0;
+/* Style the checkmark/indicator */
+.remember-form .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-    
 }
-
-
-/*
-.modal-box label,
-.modal-box .save-button,
-.modal-box input {
-    width: 95%;
-    display: block;
-    margin: 10px auto
-}
-
-.modal-box label {
-    font-size: 120%;
-}
-
-.modal-box .save-button {
-    margin-top: 16px;
-    margin-right: 20px;
-    cursor: pointer;
-    width: 20%;
-    height: 50px;
-    border: none;
-    border-radius: 30px;
-    font-size: 25px;
-    background-color: rgb(255, 0, 0);
-    color: white;
-}
-
-
-.modal-box span {
-    float: right
-}
-
-
-
-.modal-box {
-    animation-name: zoom;
-    animation-duration: .7s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
-    border: 1px solid #b7b7b7;
-    border-radius: 20px;
-    box-shadow: none;
-}
-
-@media only screen and (min-width: 1024px) and (max-width: 1680px) {
-    .bg-illustration {
-        width: 50%;
-        -webkit-animation: none;
-        animation: none;
-    }
-
-    .login {
-        width: 75%;
-    }
-}
-
-
-.bg-illustration {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background-size: unset;
-    margin-left: 22.5%;
-}
-
-
-.login {
-    max-height: 100%;
-    overflow-Y: auto;
-    float: left;
-    margin: 0 auto;
-    width: 50%;
-    margin-left: 10%;
-}
-
-    .login .formulario {
-        width: 100%;
-        margin: 0 auto;
-        position: relative;
-    }
-
-        .login .formulario h1 {
-            margin-top: 20%;
-            font-size: 280%;
-            font-weight: bolder;
-        }
-
-
-        .login .formulario .login-form {
-            margin-top: 24%;
-        }
-
-            .login .formulario .login-form form {
-                display: -ms-grid;
-                display: grid;
-            }
-
-                .login .formulario .login-form form input {
-                    font-size: 16px;
-                    font-weight: normal;
-                    background-color: #efefef;
-                    margin: 2.5%;
-                    height: 68px;
-                    border: 1px;
-                    border-radius: 26px;
-                    width: 90% auto;
-                }
-
-                .login .formulario .login-form form button[type=submit] {
-                    background: rgba(226, 36, 50, 1);
-                    border: none;
-                    margin-top: 17%;
-                    margin-left: 36%;
-                    width: 45%;
-                    height: 58px;
-                    text-transform: uppercase;
-                    color: rgb(255, 255, 255);
-                    border-radius: 40px;
-                    position: relative;
-                    z-index: 2;
-                    font-weight: bold;
-                    font-size: 20px;
-                }
-
-                    .login .formulario .login-form form button[type=submit]:hover::after {
-                        opacity: 1;
-                    }
-
-                    .login .formulario .login-form form button[type=submit]::after {
-                        content: "";
-                        position: absolute;
-                        z-index: -1;
-                        border-radius: 40px;
-                        opacity: 0;
-                        top: 0;
-                        left: 0;
-                        -webkit-transition: 0.3s ease-in-out;
-                        -o-transition: 0.3s ease-in-out;
-                        transition: 0.3s ease-in-out;
-                        right: 0;
-                        bottom: 0;
-                        background: rgba(0, 0, 0, 0.6);
-                    }
-
-        .login .formulario .remember-form {
-            position: relative;
-            margin-top: 5%;
-        }
-
-            .login .formulario .remember-form input[type=checkbox] {
-                margin-top: 0px;
-                height: 100%;
-                width: 6%;
-                border: none;
-                margin-left: 2%;
-                padding: inherit;
-                box-shadow: 0 0 0 1pt rgb(199, 15, 15);
-                outline: none;
-                transition: .1s;
-            }
-
-            .login .formulario .remember-form span {
-                font-size: 140%;
-                font-weight: normal;
-                position: absolute;
-                top: 0px;
-                color: #3B3B3B;
-                margin-left: 0%;
-            }
-
-
-        .login .formulario .forget-pass {
-            position: absolute;
-            left: 37.5%;
-            margin-top: 90%;
-        }
-
-        .login .formulario a {
-            font-size: 16px;
-            position: relative;
-            font-weight: normal;
-            color: #918F8F;
-        }
-
-            .login .formulario a::after {
-                content: "";
-                position: absolute;
-                height: 2px;
-                width: 100%;
-                border-radius: 100px;
-                background: -webkit-linear-gradient(110deg, #f794a4 0%, #fdd6bd 100%);
-                background: -o-linear-gradient(110deg, #f794a4 0%, #fdd6bd 100%);
-                background: linear-gradient(-20deg, #f794a4 0%, #fdd6bd 100%);
-                bottom: -4px;
-                left: 0;
-                -webkit-transition: 0.3s;
-                -o-transition: 0.3s;
-                transition: 0.3s;
-                opacity: 0;
-                right: 0;
-            }
-
-        .login .formulario .forget-pass a:hover::after {
-            opacity: 1;
-        }
-
-.login-form label {
-    margin-left: 0%;
-    font-size: 150%;
-}
-
-    */
