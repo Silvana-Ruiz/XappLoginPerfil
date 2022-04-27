@@ -163,7 +163,7 @@ body {
 
 .profileInfo-personal-data-afterimg {
     position: absolute;
-    top: 98%;
+    top: 72%;
     left: 0;
     background-color: var(--lightgrey); /**/
 
@@ -192,14 +192,15 @@ input[type=text], input[type=tel], input[type=email], textarea[type=input-field]
 
 /**PROFILE PICTURE**/
 .profile-pic {
-    position: absolute;
     width: 200px;
     height: 200px;
     overflow: hidden;
     border: 1px solid grey;
     border-radius: 50%;
+    position: absolute;
     top: 25%;
-    
+    left:27%;
+       
 }
 
 #photo {
