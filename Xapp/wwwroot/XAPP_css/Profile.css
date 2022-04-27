@@ -7,8 +7,9 @@
 :root {
     --grey: #f2f0f0;
     --lightgrey: #f6f6f6;
-    --red:#e22432;
+    --red: #e22432;
 }
+
 html {
     font-size: 62.5%;
     box-sizing: border-box;
@@ -41,8 +42,8 @@ body {
     background-color: rgba(52,52,52,255);
     overflow-x: hidden;
     padding-top: 16px;
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
 }
 
 #logo {
@@ -50,15 +51,14 @@ body {
     height: auto;
     margin-left: 15%;
     margin-top: 26%;
-    margin-bottom:10%;
+    margin-bottom: 10%;
 }
 
 
 /* Style sidebar links */
 
 .sidebar a {
-    
-    text-decoration: palegreen;
+    text-decoration: none;
     font-size: 20px;
     color: #ffffff;
     display: block;
@@ -71,24 +71,24 @@ body {
     .sidebar {
         height: 40%;
         width: 100%;
-        position:static;
-        
+        position: static;
     }
+
     #logo {
         margin: 0 auto;
-        margin-bottom:2rem;
+        margin-bottom: 2rem;
     }
+
     .sidebar a {
         margin: 0 auto;
         margin-bottom: 1rem;
     }
-    
 }
 
 /* Style links on mouse-over */
 
 .sidebar a:hover {
-    color: #ff0000;
+    color: rgb(226, 36, 50);
 }
 
 
@@ -98,12 +98,12 @@ body {
     position: relative;
     margin-top: 5%;
     left: 27%;
-    
 }
 
 .myprofiletext {
     font-weight: bold;
     font-size: 4rem;
+    
 }
 
 
@@ -116,24 +116,21 @@ body {
     grid-row: 2;
     gap: 30% 4%;
 }
+
 @media(max-width:768px) {
-    .myprofiletext{
-        text-align:center;
+    .myprofiletext {
+        text-align: center;
     }
 
     .profileWrapper {
         display: flex;
         flex-direction: column;
-
-       
-        position:relative;
-        left:0;
-        
-    
-   
+        position: relative;
+        left: 0;
     }
-    .profilesection{
-        left:0;
+
+    .profilesection {
+        left: 0;
     }
 }
 
@@ -143,43 +140,42 @@ body {
     top: 10%;
     grid-column: 1;
     border-radius: 30px 30px 0 0;
-    background-color: pink; /**/
-    width: 40%;
+    background-color: var(--lightgrey); /**/
+    width: 37%;
     height: 80%;
     left: 0;
-    
 }
+
 .profileInfo-personal-data {
     display: flex;
     flex-direction: column;
-    width:80%;
-    margin:10%;
-    height:auto;
+    width: 80%;
+    margin: 10%;
+    height: auto;
 }
 
 @media(max-width:768px) {
     .profileInfo-personal {
-       position:relative;
-       margin: 0;
-
-
+        position: relative;
+        margin: 0;
     }
 }
 
 .profileInfo-personal-data-afterimg {
     position: absolute;
     top: 98%;
-    left:0;
-    background-color: blue; /**/
+    left: 0;
+    background-color: var(--lightgrey); /**/
+
     border-radius: 0 0 30px 30px;
     width: 100%;
-    padding-top:8%;
+    padding-top: 8%;
 }
 
 
 .afterimg {
     width: 80%;
-    margin : 0 auto;
+    margin: 0 auto;
 }
 
 input[type=text], input[type=tel], input[type=email], textarea[type=input-field] {
@@ -194,7 +190,6 @@ input[type=text], input[type=tel], input[type=email], textarea[type=input-field]
     color: black;
 }
 
-
 /**PROFILE PICTURE**/
 .profile-pic {
     position: absolute;
@@ -203,10 +198,7 @@ input[type=text], input[type=tel], input[type=email], textarea[type=input-field]
     overflow: hidden;
     border: 1px solid grey;
     border-radius: 50%;
-    top: 37%;
-    left:23%;
-
-
+    top: 25%;
     
 }
 
@@ -240,45 +232,54 @@ input[type=text], input[type=tel], input[type=email], textarea[type=input-field]
 .profileInfo-skills {
     grid-column: 2;
     grid-row: 1;
-    background-color: orange; /***/
+    background-color: white;
     position: absolute;
     top: 10%;
-    width: 88%;
-    height: 60%;
-    margin-left: 10%;
+    width: 90%;
+    height: 50%;
+    margin-left: 6%;
     border-radius: 30px;
 }
 
 .skills_title {
-    margin-top: -30%;
-    margin-left: 2%;
+    margin-left: 8%;
     color: red;
     font-weight: bold;
     font-size: 36px;
+}
+
+.skill-button {
+    background: transparent;
+    box-shadow: none;
+    cursor: pointer;
+    margin-top: 19%;
+    font-weight: bold;
+    margin-left: 78%;
+    border: none;
+    font-size:135%;
 }
 
 .profileInfo-resume {
     grid-column: 2;
     grid-row: 2;
-    background-color: var(--lightgrey);
+    background-color: white;
     margin-top: 25%;
-    background-color: lightgreen; /***/
-    width: 88%;
-    margin-left: 10%;
+    width: 90%;
+    margin-left: 6%;
     border-radius: 30px;
+    height: 50%;
 }
 
 .resume_title {
-    margin-top: -3%;
-    margin-left: 1%;
+    margin-top: -2%;
+    margin-left: 8%;
     color: red;
     font-weight: bold;
     font-size: 36px;
 }
 
-.sectiontitle{
-    color:var(--red);
-
+.sectiontitle {
+    color: var(--red);
 }
 
 /* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
@@ -293,24 +294,27 @@ input[type=text], input[type=tel], input[type=email], textarea[type=input-field]
 }
 
 
-.form-control{
-    border-radius:10px;
-   font-size:1.5rem;
+.form-control {
+    border-radius: 10px;
+    font-size: 1.5rem;
 }
 
-.form-control:focus {
-    box-shadow: none;
-    border-color: #c86868
-}
+    .form-control:focus {
+        box-shadow: none;
+        border-color: #c86868
+    }
 
 /* Boton para guardar cambios en el perfil */
 .profile-button {
     background: transparent;
     box-shadow: none;
     border: none;
-    margin-left: 60%;
     color: red;
     font-size: 20px;
+    position: absolute;
+    top: 10%;
+    right: 30%;
+
 }
 
     .profile-button:hover {
@@ -324,12 +328,14 @@ input[type=text], input[type=tel], input[type=email], textarea[type=input-field]
         background: transparent;
         box-shadow: none;
         border: none;
+        outline: none;
     }
 
     .profile-button:active {
         background: transparent;
         box-shadow: none;
         border: none;
+        
     }
 
 
@@ -340,17 +346,6 @@ input[type=text], input[type=tel], input[type=email], textarea[type=input-field]
     color: #ff0000;
 }
 
-/* Boton para agregar Skills */
-
-.skill-button {
-    background: transparent;
-    box-shadow: none;
-    cursor: pointer;
-    margin-top: 28%;
-    font-weight: bold;
-    margin-right: 1%;
-}
-
 
 /* Agregar Archivo PDF */
 
@@ -358,8 +353,11 @@ input[type=text], input[type=tel], input[type=email], textarea[type=input-field]
     background-color: transparent;
     width: 10%;
     height: 60px;
-    margin-top: 20%;
-    margin-left: 90%;
+    margin-top: 0%;
+    margin-left: 88%;
+    border: none;
+    box-shadow: none;
+    display: inline-block;
 }
 
 #icono_carpeta {
@@ -370,8 +368,20 @@ input[type=text], input[type=tel], input[type=email], textarea[type=input-field]
 #pdf {
     margin-top: 6%;
     width: 0%;
-    display: none;
+    color: black;
+    background-color: purple;
 }
+
+#boton_icono_pdf {
+    color: red;
+    background-color: transparent;
+    width: 16%;
+    height: 140px;
+    font-size: 100px;
+    margin-top: 1%;
+    border: none;
+}
+
 
 /* PopUp de Añadir Skills */
 
@@ -382,23 +392,30 @@ input[type=text], input[type=tel], input[type=email], textarea[type=input-field]
     background-color: rgba(0, 0, 0, 0.5);
     top: 0;
     left: 0;
-    overflow: auto
+    overflow: auto;
 }
 
 .modal-box {
     width: 40%;
     margin: 30px auto;
-    background-color: white;
+    background-color: var(--lightgrey);
     position: center;
     text-align: left;
     height: auto;
+    animation-name: zoom;
+    animation-duration: .7s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    border: 1px solid #b7b7b7;
+    border-radius: 40px;
+    box-shadow: none;
 }
 
     .modal-box .close {
         position: absolute;
         right: 16px;
         top: 5px;
-        font-size: 25px;
+        font-size: 50px;
         font-weight: bolder;
         cursor: pointer
     }
@@ -408,67 +425,57 @@ input[type=text], input[type=tel], input[type=email], textarea[type=input-field]
             color: #c6c6c6
         }
 
-    .modal-box img {
-        width: 30%;
-        border-radius: 50%;
+
+    .modal-box label,
+    .modal-box .save-button,
+    .modal-box input {
+        width: 95%;
         display: block;
-        margin: 60px;
-        padding: 14px;
-        margin-bottom: 30px;
-        min-width: 150px;
-        max-width: 230px
+        margin: 10px auto;
+        border-radius: 40px;
+    }
+
+    .modal-box label {
+        font-size: 24px;
+    }
+
+    .modal-box .save-button {
+        margin-top: 16px;
+        margin-right: 20px;
+        cursor: pointer;
+        width: 150px;
+        height: 50px;
+        border: none;
+        border-radius: 12px;
+        font-size: 25px;
+        background-color: rgb(255, 0, 0);
+        color: white;
     }
 
 
-.close-forgot {
-    background-color: orange;
-}
 
-.modal-box label,
-.modal-box .save-button,
-.modal-box input {
-    width: 95%;
-    display: block; 
-    margin: 10px auto
-}
+    .modal-box .close-forgot {
+        background-color: #d8d8d8;
+        width: 100%;
+        padding: 30px 2.5%;
+    }
 
-.modal-box .save-button {
-    margin-top: 16px;
-    margin-right: 20px;
-    cursor: pointer;
-    width: 150px;
-    height: 50px;
-    border: none;
-    border-radius: 12px;
-    font-size: 25px;
-    background-color: rgb(255, 0, 0);
-    color: white;
-}
-
-
-
-.modal-box .close-forgot {
-    background-color: #d8d8d8;
-    width: 100%;
-    padding: 30px 2.5%;
-}
-
-.modal-box span {
-    float: right
-}
+    .modal-box span {
+        float: right
+    }
 
 .modal-cont {
     display: none
 }
 
-.modal-box {
-    animation-name: zoom;
-    animation-duration: .7s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
-    border: 1px solid #b7b7b7;
-    border-radius: 4px;
-    box-shadow: none;
+h1 {
+    margin: auto;
+    text-align: left;
+    display: block;
+    margin-top: 10px;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 @keyframes zoom {
@@ -481,51 +488,30 @@ input[type=text], input[type=tel], input[type=email], textarea[type=input-field]
     }
 }
 
-h1 {
-    margin: auto;
-    text-align: center;
-    display: block;
-    margin-top: 20px;
-}
 
 /*SKILLS*/
-.basic {
-    background: #36C895;
+#skill_pill {
     color: rgb(0, 0, 0);
     box-shadow: none;
     border: none;
     cursor: pointer;
-    margin-left: 20px;
+    margin-left: 15px;
     border-radius: 16px;
+    font-size: 18px;
+}
+
+.basic {
+    background: #36C895;
 }
 
 .medium {
     background: #DBAA50;
-    color: rgb(0, 0, 0);
-    box-shadow: none;
-    border: none;
-    cursor: pointer;
-    margin-left: 15px;
-    border-radius: 16px;
 }
 
 .advanced {
     background: #53C7E7;
-    color: rgb(0, 0, 0);
-    box-shadow: none;
-    border: none;
-    cursor: pointer;
-    margin-left: 15px;
-    border-radius: 16px;
 }
 
 .expert {
     background: #d478cb;
-    color: rgb(0, 0, 0);
-    box-shadow: none;
-    border: none;
-    cursor: pointer;
-    margin-left: 15px;
-    border-radius: 16px;
 }
-
