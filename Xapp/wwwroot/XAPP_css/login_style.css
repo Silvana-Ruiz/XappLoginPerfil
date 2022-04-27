@@ -260,11 +260,12 @@ button[type=submit] {
     display: flex;
     flex-direction: column;
     background-color: var(--grey);
-    height: 110%;
+    height: 100%;
     padding-left: 5%;
     padding-right: 5%;
     border-radius: 30px;
     margin-bottom: 0;
+   
 }
 
 @media(max-height:800px) {
@@ -279,6 +280,7 @@ button[type=submit] {
 }
 
 .changepwd {
+    margin-top:5%;
     font-size: 3.5rem;
     width: 120%;
 }
@@ -306,6 +308,9 @@ label.modal-cont, input[type="email"].modal-cont, input[type="password"].modal-c
     background-color: var(--red);
     color: white;
     margin-top: 0;
+    position: absolute;
+    bottom: 6%;
+    right: 4%;
 }
 button::before,
 button::after {
@@ -323,7 +328,7 @@ button::after {
     }
 
     .modal-box .save-button {
-        position: absolute;
+      
         bottom: 3%;
         right: 4%;
     }
