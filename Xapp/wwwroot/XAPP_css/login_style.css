@@ -1,5 +1,4 @@
-﻿
-* {
+﻿* {
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
@@ -268,7 +267,21 @@ button[type=submit] {
     margin-bottom: 0;
 }
 
+@media(max-height:800px) {
+    .login-box {
+        height: 120%;
+    }
 
+        .login-box contra_nueva {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+}
+
+.changepwd {
+    font-size: 3.5rem;
+    width: 120%;
+}
 
 label.modal-cont, input[type="email"].modal-cont, input[type="password"].modal-cont {
     width: 100%;
@@ -293,15 +306,7 @@ label.modal-cont, input[type="email"].modal-cont, input[type="password"].modal-c
     background-color: var(--red);
     color: white;
     margin-top: 0;
-    position: absolute;
-    right: 5%;
-    bottom: 6%;
 }
-
-
-
-
-
 button::before,
 button::after {
     content: '';
@@ -360,70 +365,13 @@ img {
         margin-left: 5%;
     }
 
-/* Customize the label (the container) */
-.remember-form {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+.remember-form{
+    display:flex;
+    flex-direction:row;
+    width:100%;
+
 }
 
-    /* Hide the browser's default checkbox */
-    .remember-form input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 0;
-        width: 0;
-    }
-
-/* Create a custom checkbox */
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-}
-
-/* On mouse-over, add a grey background color */
-.remember-form:hover input ~ .checkmark {
-    background-color: #ccc;
-}
-
-/* When the checkbox is checked, add a blue background */
-.remember-form input:checked ~ .checkmark {
-    background-color: #2196F3;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-/* Show the checkmark when checked */
-.remember-form input:checked ~ .checkmark:after {
-    display: block;
-}
-
-/* Style the checkmark/indicator */
-.remember-form .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+input[type=checkbox] {
+    align-self:center;
 }
